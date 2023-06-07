@@ -1,0 +1,57 @@
+﻿@model SliderInfoDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="col-lg-10 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Slider Information Detail Table</h4>
+            <div class="table-responsive pt-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Image
+                            </th>
+
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                Create Date
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="~/img/@Model.SignImage" alt="image" style="with:100px;height:50px; border-radius:0%" />
+                            </td>
+                            <td>
+                                @Html.Raw(Model.Title)
+                            </td>
+                            <td>
+                                @Html.Raw(Model.Description)
+                            </td>
+                            <td>
+                                @Model.CreatedDate
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br></br>
+            <a asp-action="Index" class="btn btn-outline-info btn-fw">Back</a>
+        </div>
+    </div>
+
+</div>
+
